@@ -1,0 +1,370 @@
+/* Services Page Specific Styles */
+
+/* Page Hero */
+.page-hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding-top: 100px;
+}
+
+.page-hero .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.page-hero .hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Service Detail Cards */
+.service-detail-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+
+.service-image-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-detail-card:hover .service-image {
+  transform: scale(1.1);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.service-price-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.service-content {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-header {
+  display: flex;
+  justify-content: between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.service-header h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  flex: 1;
+}
+
+.service-duration {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.service-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.service-benefits h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.benefits-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-tag {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.service-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.service-actions .btn {
+  flex: 1;
+}
+
+/* Payment Methods */
+.payment-methods {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.payment-method {
+  background: var(--light-bg);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.payment-method:hover {
+  border-color: var(--primary-color);
+  background: var(--white);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.payment-method i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.payment-method span {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+/* Add-ons */
+.addon-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 40px var(--shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.addon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+
+.addon-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.addon-icon i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.addon-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.addon-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.addon-card p {
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Pricing Cards */
+.pricing-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px var(--shadow);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-header i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-header h5 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+}
+
+.pricing-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-content li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--text-light);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pricing-content li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.pricing-content li:last-child {
+  border-bottom: none;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 1.5rem 2rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--light-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.price-info .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.price-info .duration {
+  color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .service-actions {
+    flex-direction: column;
+  }
+
+  .service-content {
+    padding: 1.5rem;
+  }
+
+  .payment-method {
+    padding: 1rem 0.5rem;
+  }
+
+  .payment-method i {
+    font-size: 1.5rem;
+  }
+
+  .addon-card,
+  .pricing-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-detail-card .row {
+    flex-direction: column;
+  }
+
+  .service-image-container {
+    height: 200px;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+}
