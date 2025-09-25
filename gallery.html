@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ZenTouch Massage</title>
+    <meta name="description" content="Explore our professional massage services through our gallery. See the relaxing environments we create and the quality of our therapeutic treatments.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="brand-icon">
+                    <i class="fas fa-spa text-primary"></i>
+                </div>
+                <span class="brand-text">ZenTouch</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="booking.html" class="btn btn-primary btn-cta">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Our Gallery</h1>
+                    <p class="hero-subtitle">
+                        Explore our professional massage services and see the relaxing environments we create for our clients. 
+                        Experience the quality and care that sets ZenTouch apart.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="filter-section py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="filter-buttons text-center">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="swedish">Swedish Massage</button>
+                        <button class="filter-btn" data-filter="deep-tissue">Deep Tissue</button>
+                        <button class="filter-btn" data-filter="aromatherapy">Aromatherapy</button>
+                        <button class="filter-btn" data-filter="hot-stone">Hot Stone</button>
+                        <button class="filter-btn" data-filter="couples">Couples</button>
+                        <button class="filter-btn" data-filter="prenatal">Prenatal</button>
+                        <button class="filter-btn" data-filter="setup">Setup & Ambiance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <div class="row g-4" id="galleryGrid">
+                <!-- Gallery items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Client Transformations</h2>
+                    <p class="section-subtitle">See the positive impact of our massage therapy on our clients' wellness journey</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="transformation-card">
+                        <div class="transformation-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Stress Relief Transformation" class="img-fluid">
+                            <div class="transformation-badge">Stress Relief</div>
+                        </div>
+                        <div class="transformation-content">
+                            <h5>Complete Stress Relief</h5>
+                            <p>"After just one session, I felt like a completely different person. The tension in my shoulders was completely gone!" - Sarah M.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="transformation-card">
+                        <div class="transformation-image">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pain Relief Transformation" class="img-fluid">
+                            <div class="transformation-badge">Pain Relief</div>
+                        </div>
+                        <div class="transformation-content">
+                            <h5>Chronic Pain Management</h5>
+                            <p>"The deep tissue massage helped me manage my chronic back pain better than any other treatment I've tried." - Michael R.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="transformation-card">
+                        <div class="transformation-image">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wellness Transformation" class="img-fluid">
+                            <div class="transformation-badge">Wellness</div>
+                        </div>
+                        <div class="transformation-content">
+                            <h5>Overall Wellness</h5>
+                            <p>"Regular couples massages have improved our relationship and individual well-being. Highly recommend!" - Lisa & John D.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" onclick="navigateLightbox('prev')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="navigateLightbox('next')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="/placeholder.svg" alt="">
+                <div class="lightbox-info">
+                    <h4 id="lightboxTitle"></h4>
+                    <p id="lightboxDescription"></p>
+                    <span class="lightbox-category" id="lightboxCategory"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="cta-title">Ready to Experience This?</h2>
+                    <p class="cta-subtitle">Book your massage appointment today and join our satisfied clients in experiencing ultimate relaxation.</p>
+                    <div class="cta-buttons">
+                        <a href="booking.html" class="btn btn-light btn-lg me-3">
+                            <i class="fas fa-calendar-alt me-2"></i>Book Your Massage
+                        </a>
+                        <a href="tel:+15551234567" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone me-2"></i>Call (555) 123-4567
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="brand-icon me-2">
+                                <i class="fas fa-spa text-primary"></i>
+                            </div>
+                            <span class="brand-text">ZenTouch</span>
+                        </div>
+                        <p class="footer-description">Professional massage therapy delivered to your doorstep. Experience ultimate relaxation and wellness in the comfort of your own space.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Swedish Massage</a></li>
+                        <li><a href="services.html">Deep Tissue</a></li>
+                        <li><a href="services.html">Aromatherapy</a></li>
+                        <li><a href="services.html">Hot Stone</a></li>
+                        <li><a href="services.html">Couples Massage</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span>info@zentouch.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <span>Available 7 days a week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">&copy; 2025 ZenTouch Massage Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

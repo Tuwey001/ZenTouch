@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Massage - ZenTouch</title>
+    <meta name="description" content="Book your professional door-to-door massage service with ZenTouch. Select your preferred service, date, time, and location.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/booking.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="brand-icon">
+                    <i class="fas fa-spa text-primary"></i>
+                </div>
+                <span class="brand-text">ZenTouch</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+                </ul>
+                <a href="booking.html" class="btn btn-primary btn-cta">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="booking-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="text-white mb-3">Book Your Massage</h1>
+                    <p class="text-white-50 mb-0">Fill out the form below to schedule your professional massage service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="booking-card">
+                        <!-- Progress Steps -->
+                        <div class="booking-progress mb-5">
+                            <div class="progress-step active">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Service Details</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Personal Info</div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Confirmation</div>
+                            </div>
+                        </div>
+
+                        <!-- Form Steps -->
+                        <form id="bookingForm">
+                            <!-- Step 1: Service Details -->
+                            <div class="form-step active" id="step1">
+                                <h2 class="step-title">Select Your Service</h2>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-4">
+                                            <label for="serviceType" class="form-label">Massage Type</label>
+                                            <select class="form-select" id="serviceType" required>
+                                                <option value="" selected disabled>Select a massage type</option>
+                                                <option value="swedish" data-price="80">Swedish Massage - $80</option>
+                                                <option value="deep-tissue" data-price="90">Deep Tissue Massage - $90</option>
+                                                <option value="aromatherapy" data-price="85">Aromatherapy Massage - $85</option>
+                                                <option value="hot-stone" data-price="100">Hot Stone Massage - $100</option>
+                                                <option value="sports" data-price="95">Sports Massage - $95</option>
+                                                <option value="prenatal" data-price="85">Prenatal Massage - $85</option>
+                                                <option value="couples" data-price="150">Couples Massage - $150</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="duration" class="form-label">Duration</label>
+                                            <select class="form-select" id="duration" required>
+                                                <option value="" selected disabled>Select duration</option>
+                                                <option value="30">30 minutes</option>
+                                                <option value="60" selected>60 minutes</option>
+                                                <option value="90">90 minutes</option>
+                                                <option value="120">120 minutes</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="date" class="form-label">Preferred Date</label>
+                                            <input type="date" class="form-control" id="date" required min="">
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="time" class="form-label">Preferred Time</label>
+                                            <select class="form-select" id="time" required>
+                                                <option value="" selected disabled>Select a time</option>
+                                                <option value="08:00">8:00 AM</option>
+                                                <option value="09:00">9:00 AM</option>
+                                                <option value="10:00">10:00 AM</option>
+                                                <option value="11:00">11:00 AM</option>
+                                                <option value="12:00">12:00 PM</option>
+                                                <option value="13:00">1:00 PM</option>
+                                                <option value="14:00">2:00 PM</option>
+                                                <option value="15:00">3:00 PM</option>
+                                                <option value="16:00">4:00 PM</option>
+                                                <option value="17:00">5:00 PM</option>
+                                                <option value="18:00">6:00 PM</option>
+                                                <option value="19:00">7:00 PM</option>
+                                                <option value="20:00">8:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="booking-summary">
+                                            <h5>Booking Summary</h5>
+                                            <div class="summary-item">
+                                                <span>Service:</span>
+                                                <span id="summary-service">-</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Duration:</span>
+                                                <span id="summary-duration">-</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Date:</span>
+                                                <span id="summary-date">-</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Time:</span>
+                                                <span id="summary-time">-</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Base Price:</span>
+                                                <span id="summary-price">$0</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Travel Fee:</span>
+                                                <span id="summary-travel">$0</span>
+                                            </div>
+                                            <div class="summary-item">
+                                                <span>Total:</span>
+                                                <span id="summary-total">$0</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <label for="specialRequests" class="form-label">Special Requests or Notes</label>
+                                            <textarea class="form-control" id="specialRequests" rows="4" placeholder="Any specific areas to focus on, pressure preferences, or other requests..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <button type="button" class="btn btn-outline-primary" disabled>Previous</button>
+                                    <button type="button" class="btn btn-primary" id="nextToStep2">Next</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2: Personal Information -->
+                            <div class="form-step" id="step2">
+                                <h2 class="step-title">Your Information</h2>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-4">
+                                            <label for="fullName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="mb-4">
+                                            <label for="address" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="address" placeholder="Street Address" required>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <label for="city" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="city" required>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <label for="zipCode" class="form-label">ZIP Code</label>
+                                                <input type="text" class="form-control" id="zipCode" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="instructions" class="form-label">Delivery Instructions</label>
+                                            <textarea class="form-control" id="instructions" rows="3" placeholder="Building access codes, parking information, etc."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <button type="button" class="btn btn-outline-primary" id="backToStep1">Previous</button>
+                                    <button type="button" class="btn btn-primary" id="nextToStep3">Next</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3: Confirmation -->
+                            <div class="form-step" id="step3">
+                                <h2 class="step-title">Confirm Your Booking</h2>
+                                
+                                <div class="confirmation-content text-center">
+                                    <div class="confirmation-icon mb-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h3 class="confirmation-title">Ready to Book?</h3>
+                                    <p class="confirmation-message">
+                                        Please review your booking details below. Once confirmed, you'll have the option to share your booking on Facebook.
+                                    </p>
+                                    
+                                    <div class="detail-card">
+                                        <h5>Booking Details</h5>
+                                        <div class="detail-item">
+                                            <span>Service:</span>
+                                            <span id="confirm-service">-</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Duration:</span>
+                                            <span id="confirm-duration">-</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Date & Time:</span>
+                                            <span id="confirm-datetime">-</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Location:</span>
+                                            <span id="confirm-location">-</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span>Total Amount:</span>
+                                            <span id="confirm-total">$0</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="next-steps mt-4">
+                                        <h6>What happens next?</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-primary me-2"></i> You'll receive a confirmation email</li>
+                                            <li><i class="fas fa-check text-primary me-2"></i> Our team will contact you to confirm details</li>
+                                            <li><i class="fas fa-check text-primary me-2"></i> Your therapist will arrive at the scheduled time</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-navigation">
+                                    <button type="button" class="btn btn-outline-primary" id="backToStep2">Previous</button>
+                                    <button type="submit" class="btn btn-primary" id="submitBooking">Confirm & Share on Facebook</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="brand-icon me-2">
+                                <i class="fas fa-spa text-primary"></i>
+                            </div>
+                            <span class="brand-text">ZenTouch</span>
+                        </div>
+                        <p class="footer-description">Professional massage therapy delivered to your doorstep. Experience ultimate relaxation and wellness in the comfort of your own space.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Swedish Massage</a></li>
+                        <li><a href="services.html">Deep Tissue</a></li>
+                        <li><a href="services.html">Aromatherapy</a></li>
+                        <li><a href="services.html">Hot Stone</a></li>
+                        <li><a href="services.html">Couples Massage</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span>info@zentouch.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <span>Available 7 days a week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">&copy; 2025 ZenTouch Massage Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').min = today;
+            
+            // Form navigation
+            const step1 = document.getElementById('step1');
+            const step2 = document.getElementById('step2');
+            const step3 = document.getElementById('step3');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            
+            document.getElementById('nextToStep2').addEventListener('click', function() {
+                if (validateStep1()) {
+                    step1.classList.remove('active');
+                    step2.classList.add('active');
+                    updateProgress(1);
+                    updateSummary();
+                }
+            });
+            
+            document.getElementById('backToStep1').addEventListener('click', function() {
+                step2.classList.remove('active');
+                step1.classList.add('active');
+                updateProgress(0);
+            });
+            
+            document.getElementById('nextToStep3').addEventListener('click', function() {
+                if (validateStep2()) {
+                    step2.classList.remove('active');
+                    step3.classList.add('active');
+                    updateProgress(2);
+                    updateConfirmation();
+                }
+            });
+            
+            document.getElementById('backToStep2').addEventListener('click', function() {
+                step3.classList.remove('active');
+                step2.classList.add('active');
+                updateProgress(1);
+            });
+            
+            // Update progress steps
+            function updateProgress(stepIndex) {
+                progressSteps.forEach((step, index) => {
+                    step.classList.remove('active', 'completed');
+                    if (index < stepIndex) {
+                        step.classList.add('completed');
+                    } else if (index === stepIndex) {
+                        step.classList.add('active');
+                    }
+                });
+            }
+            
+            // Form validation
+            function validateStep1() {
+                const serviceType = document.getElementById('serviceType');
+                const duration = document.getElementById('duration');
+                const date = document.getElementById('date');
+                const time = document.getElementById('time');
+                
+                if (!serviceType.value) {
+                    alert('Please select a massage type');
+                    serviceType.focus();
+                    return false;
+                }
+                
+                if (!duration.value) {
+                    alert('Please select a duration');
+                    duration.focus();
+                    return false;
+                }
+                
+                if (!date.value) {
+                    alert('Please select a date');
+                    date.focus();
+                    return false;
+                }
+                
+                if (!time.value) {
+                    alert('Please select a time');
+                    time.focus();
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            function validateStep2() {
+                const fullName = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                const phone = document.getElementById('phone');
+                const address = document.getElementById('address');
+                const city = document.getElementById('city');
+                const zipCode = document.getElementById('zipCode');
+                
+                if (!fullName.value) {
+                    alert('Please enter your full name');
+                    fullName.focus();
+                    return false;
+                }
+                
+                if (!email.value) {
+                    alert('Please enter your email address');
+                    email.focus();
+                    return false;
+                }
+                
+                if (!phone.value) {
+                    alert('Please enter your phone number');
+                    phone.focus();
+                    return false;
+                }
+                
+                if (!address.value) {
+                    alert('Please enter your address');
+                    address.focus();
+                    return false;
+                }
+                
+                if (!city.value) {
+                    alert('Please enter your city');
+                    city.focus();
+                    return false;
+                }
+                
+                if (!zipCode.value) {
+                    alert('Please enter your ZIP code');
+                    zipCode.focus();
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            // Update booking summary
+            function updateSummary() {
+                const serviceType = document.getElementById('serviceType');
+                const selectedOption = serviceType.options[serviceType.selectedIndex];
+                const serviceName = selectedOption.text.split(' - ')[0];
+                const basePrice = selectedOption.getAttribute('data-price') || 0;
+                const duration = document.getElementById('duration').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                
+                // Calculate price based on duration
+                let price = parseInt(basePrice);
+                if (duration === '90') price = Math.round(price * 1.5);
+                if (duration === '120') price = price * 2;
+                
+                // Calculate travel fee (simplified - could be based on zip code in real implementation)
+                const travelFee = 15;
+                
+                document.getElementById('summary-service').textContent = serviceName;
+                document.getElementById('summary-duration').textContent = duration + ' minutes';
+                document.getElementById('summary-date').textContent = formatDate(date);
+                document.getElementById('summary-time').textContent = formatTime(time);
+                document.getElementById('summary-price').textContent = '$' + price;
+                document.getElementById('summary-travel').textContent = '$' + travelFee;
+                document.getElementById('summary-total').textContent = '$' + (price + travelFee);
+            }
+            
+            // Update confirmation details
+            function updateConfirmation() {
+                const serviceType = document.getElementById('serviceType');
+                const selectedOption = serviceType.options[serviceType.selectedIndex];
+                const serviceName = selectedOption.text.split(' - ')[0];
+                const duration = document.getElementById('duration').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const fullName = document.getElementById('fullName').value;
+                const address = document.getElementById('address').value;
+                const city = document.getElementById('city').value;
+                const zipCode = document.getElementById('zipCode').value;
+                
+                const basePrice = parseInt(selectedOption.getAttribute('data-price') || 0);
+                let price = basePrice;
+                if (duration === '90') price = Math.round(price * 1.5);
+                if (duration === '120') price = price * 2;
+                const travelFee = 15;
+                const total = price + travelFee;
+                
+                document.getElementById('confirm-service').textContent = serviceName;
+                document.getElementById('confirm-duration').textContent = duration + ' minutes';
+                document.getElementById('confirm-datetime').textContent = formatDate(date) + ' at ' + formatTime(time);
+                document.getElementById('confirm-location').textContent = address + ', ' + city + ', ' + zipCode;
+                document.getElementById('confirm-total').textContent = '$' + total;
+            }
+            
+            // Format date for display
+            function formatDate(dateString) {
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString('en-US', options);
+            }
+            
+            // Format time for display
+            function formatTime(timeString) {
+                const [hours, minutes] = timeString.split(':');
+                const hour = parseInt(hours);
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const displayHour = hour % 12 || 12;
+                return `${displayHour}:${minutes} ${ampm}`;
+            }
+            
+            // Event listeners for real-time updates
+            document.getElementById('serviceType').addEventListener('change', updateSummary);
+            document.getElementById('duration').addEventListener('change', updateSummary);
+            document.getElementById('date').addEventListener('change', updateSummary);
+            document.getElementById('time').addEventListener('change', updateSummary);
+            
+            // Form submission
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const submitBtn = document.getElementById('submitBooking');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="loading">Booking...</span>';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(function() {
+                    // Prepare booking data
+                    const bookingData = {
+                        service: document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text,
+                        duration: document.getElementById('duration').value + ' minutes',
+                        date: document.getElementById('date').value,
+                        time: document.getElementById('time').value,
+                        name: document.getElementById('fullName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        address: document.getElementById('address').value,
+                        city: document.getElementById('city').value,
+                        zipCode: document.getElementById('zipCode').value,
+                        instructions: document.getElementById('instructions').value,
+                        specialRequests: document.getElementById('specialRequests').value
+                    };
+                    
+                    // Prepare Facebook share content
+                    const shareText = `I just booked a ${bookingData.service} with ZenTouch Massage! ${bookingData.duration} session on ${formatDate(bookingData.date)} at ${formatTime(bookingData.time)}. So excited for my relaxing massage!`;
+                    const shareUrl = window.location.href;
+                    
+                    // Open Facebook share dialog
+                    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+                    window.open(facebookShareUrl, '_blank', 'width=600,height=400');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Show success message
+                    alert('Booking submitted successfully! A confirmation has been sent to your email.');
+                    
+                    // Reset form (optional)
+                    // document.getElementById('bookingForm').reset();
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
