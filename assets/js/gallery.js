@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 14,
-      src: "https://images.unsplash.com/photo-1594824804732-ca8db7536a9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://revives.ae/wp-content/uploads/2022/02/prenatal-min-1.jpg",
       title: "Prenatal Comfort",
       category: "prenatal",
       description: "Specialized positioning and techniques for expecting mothers' comfort",
