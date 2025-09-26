@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 
-                <!-- Contact Form -->
+                <!-- Contact Form --> 
                 <div class="col-lg-7">
                     <div class="contact-form-card">
                         <h3>Send Us a Message</h3>
@@ -138,94 +138,48 @@
                             Have a question or ready to book? Fill out the form below and we'll get back to you promptly.
                         </p>
                         
-                        <form id="contactForm" action="php/contact.php" method="POST" class="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lastName" class="form-label">Last Name *</label>
-                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email Address *</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="subject" class="form-label">Subject *</label>
-                                        <select class="form-control" id="subject" name="subject" required>
-                                            <option value="">Select a subject</option>
-                                            <option value="booking">Booking Inquiry</option>
-                                            <option value="services">Service Information</option>
-                                            <option value="pricing">Pricing Questions</option>
-                                            <option value="availability">Availability Check</option>
-                                            <option value="feedback">Feedback</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="preferredService" class="form-label">Preferred Service</label>
-                                        <select class="form-control" id="preferredService" name="preferredService">
-                                            <option value="">Select a service (optional)</option>
-                                            <option value="swedish">Swedish Massage</option>
-                                            <option value="deep-tissue">Deep Tissue Massage</option>
-                                            <option value="aromatherapy">Aromatherapy Massage</option>
-                                            <option value="hot-stone">Hot Stone Massage</option>
-                                            <option value="couples">Couples Massage</option>
-                                            <option value="prenatal">Prenatal Massage</option>
-                                            <option value="sports">Sports Massage</option>
-                                            <option value="reflexology">Reflexology</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="message" class="form-label">Message *</label>
-                                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your needs, preferred dates, or any questions you have..." required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" value="yes">
-                                        <label class="form-check-label" for="newsletter">
-                                            Subscribe to our newsletter for wellness tips and special offers
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
-                                        <label class="form-check-label" for="privacy">
-                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> *
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">
-                                        <span class="btn-text">Send Message</span>
-                                        <span class="btn-loading d-none">
-                                            <i class="fas fa-spinner fa-spin me-2"></i>Sending...
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        <form id="contactForm" onsubmit="sendToMessenger(event)" class="contact-form">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name *</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name *</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading d-none">
+                            <i class="fas fa-spinner fa-spin me-2"></i>Sending...
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
                         
                         <!-- Success/Error Messages -->
                         <div id="formMessages" class="mt-3"></div>
@@ -448,5 +402,27 @@
     <!-- Custom JS -->
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+function sendToMessenger(event) {
+    event.preventDefault(); // stop normal submit
+
+    // Collect form values
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // Build message text
+    const text = `Hello, my name is ${firstName} ${lastName}. 
+Email: ${email} 
+Phone: ${phone || "N/A"} 
+Message: ${message}`;
+
+    // Redirect to Messenger with prefilled text
+    const messengerUrl = "https://m.me/davis.tyson.77?ref=" + encodeURIComponent(text);
+    window.open(messengerUrl, "_blank");
+}
+</script>
 </body>
 </html>
