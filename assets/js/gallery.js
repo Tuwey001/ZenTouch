@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1571019613454-1cb289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://bodyworksedinburgh.com/wp-content/uploads/2014/05/aromatherapy-massage-edinburgh-438x291.jpg",
       title: "Aromatherapy Experience",
       category: "aromatherapy",
       description: "Essential oils enhance the massage experience for mind and body wellness",
@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-15597571485c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://elementsmassage.com/files/shared/Depositphotos_34400147_s-2019.jpg",
       title: "Couples Massage",
       category: "couples",
       description: "Romantic massage experience for two in a beautifully prepared environment",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1540555700478-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://cdn.shopify.com/s/files/1/0831/7485/0869/files/laralutzpoupon2023-2039-Edit__1_480x480.jpg?v=1712756884",
       title: "Prenatal Care",
       category: "prenatal",
       description: "Gentle, safe massage specially designed for expecting mothers",
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1512290923902-e120087004b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://d39lctrl8mh8qp.cloudfront.net/wp-content/uploads/2016/06/GemstoneReflexology1.jpg",
       title: "Reflexology Session",
       category: "aromatherapy",
       description: "Pressure point therapy for feet and hands promoting overall wellness",
@@ -75,14 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 11,
-      src: "https://images.unsplash.com/photo-1591343395082-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://secretoasisspa.co.uk/wp-content/uploads/2023/10/secret-oasis-spa-aromatherapy-massage_safety.jpg",
       title: "Essential Oils Collection",
       category: "aromatherapy",
       description: "Premium essential oils for therapeutic benefits and aromatherapy",
     },
     {
       id: 12,
-      src: "https://images.unsplash.com/photo-154436756704732-ca8db7536a9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://www.rejuvenationsmassagetherapy.com/wp-content/uploads/2020/01/elbow.jpg",
       title: "Therapeutic Massage",
       category: "swedish",
       description: "Professional therapeutic massage techniques for healing and relaxation",
